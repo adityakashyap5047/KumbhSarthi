@@ -1,16 +1,14 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    images: {
-        remotePatterns: [
-          {
-            protocol: 'https',
-            hostname: 'avatar.vercel.sh',
-            port: '',
-            pathname: '/account123/**',
-            search: '',
-          },
-        ],
-    },
+export const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'avatar.vercel.sh',
+        port: '',
+        pathname: '/**', // Match all paths under this domain
+      },
+    ],
+  },
 };
 
 export default nextConfig;
